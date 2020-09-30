@@ -15,6 +15,8 @@ for c in range(501):
 		if a**2+b**2==c**2:
 			print(a,b,c,a*b*c)
 			
-			end=time.time()
-			print('this code took ', str(end-st),' seconds to run')
+			
 			quit()
+
+end=time.time()
+print('this code took ', str(end-st),' seconds to run')

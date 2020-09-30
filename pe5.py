@@ -4,6 +4,7 @@
 #define function for listing primary factors
 import math
 import time
+
 st=time.time()
 
 def pfacs(num):
