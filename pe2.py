@@ -4,9 +4,9 @@
 
 import time 
 
- st=time.time()fib=[1,2]
+st=time.time()fib=[1,2]
 
-while fib[-1]+fib[-2] < 4E6:
+while fib[-1]+fib[-2] <4E6:
 	fib.append(fib[-1]+fib[-2])
 
 print(fib)

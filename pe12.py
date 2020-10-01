@@ -18,31 +18,29 @@
 import time
 import math
 
-st=time.time()
+st = time.time()
 
 
-trinum=0.
-counter=0.
-factors=[]
+trinum = 0.0
+counter = 0.0
+factors = []
 
 while len(factors) <= 500:
-	counter+=1
-	trinum=trinum+counter
-	factors=[1.,trinum]
-	for i in range(2,int(math.ceil(math.sqrt(trinum)))):
-		if trinum%i==0:
-			factors.append(i)
-			factors.append(trinum/i)
+    counter += 1
+    trinum = trinum + counter
+    factors = [1.0, trinum]
+    for i in range(2, int(math.ceil(math.sqrt(trinum)))):
+        if trinum % i == 0:
+            factors.append(i)
+            factors.append(trinum / i)
 
-	if math.sqrt(trinum)%1==0:
-		factors.append(math.sqrt(trinum))
-
-
-print(trinum,len(factors))	
+    if math.sqrt(trinum) % 1 == 0:
+        factors.append(math.sqrt(trinum))
 
 
+print(trinum, len(factors))
 
 
-end=time.time()
+end = time.time()
 
-print('this code took ',str(end-st),' seconds to run')
+print("this code took ", str(end - st), " seconds to run")
