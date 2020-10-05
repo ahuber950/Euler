@@ -19,7 +19,5 @@ def mod3(num):
 			break
 		while primes[0] % i == 0:
 			primes.append(i)
-			primes[0] = int(primes[0]/i)
+			primes[0] = primes[0]/i
 	return(max(primes))
-
-print(mod3(600851475143))
