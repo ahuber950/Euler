@@ -3,19 +3,15 @@
 # A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-import time
+def mod4(digits):
+	
+	if type(digits) != int or digits < 1:
+		raise ValueError("The value must be an integer greater than zero")
 
-st = time.time()
+	x = 0
 
-x = 0
-
-for i in range(100, 1000):
-    for j in range(100, 1000):
-        if i * j > x and str(i * j) == str(i * j)[::-1]:
-            x = i * j
-print(x)
-
-
-end = time.time()
-
-print("this code took ", str(end - st), " seconds to run")
+	for i in range(10**(digits-1), 10**(digits)):
+	    for j in range(10**(digits-1), 10**(digits)):
+	        if i * j > x and str(i * j) == str(i * j)[::-1]:
+	            x = i * j
+	return(x)
