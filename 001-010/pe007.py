@@ -4,13 +4,7 @@
 
 # What is the 10 001st prime number?
 
-
-
 import math
-import time
-
-st = time.time()
-
 
 def isprime(num):
     prime = True
@@ -21,14 +15,16 @@ def isprime(num):
     return prime
 
 
-x = int(input("I want to know the _th prime number\n"))
-primes = [2]
-i = 3
-while len(primes) < x:
-    if isprime(i) is True:
-        primes.append(i)
-    i += 2
+def mod7(x):
 
-print(primes[x - 1])
-end = time.time()
-print(str(end - st) + " s")
+	if type(x) != int or x < 1:
+		raise ValueError("The value must be an integer greater than zero")
+
+	primes = [2]
+	i = 3
+	while len(primes) < x:
+	    if isprime(i) is True:
+	        primes.append(i)
+	    i += 2
+
+	return(primes[x - 1])
