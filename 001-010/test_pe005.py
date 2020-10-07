@@ -1,17 +1,17 @@
 import unittest
-from pe004 import mod4
+from pe005 import mod5
 
 
-class Testpe004(unittest.TestCase):
-    def test_pe004(self):
-        self.assertEqual(mod4(1), 9)
-        self.assertEqual(mod4(2), 9009)
-        self.assertEqual(mod4(3), 906609)
+class Testpe005(unittest.TestCase):
+    def test_pe005(self):
+        self.assertEqual(mod5(1), 1)
+        self.assertEqual(mod5(10), 2520)
+        self.assertEqual(mod5(20), 232792560)
 
     def test_values(self):
-        self.assertRaises(ValueError, mod4, -1)
-        self.assertRaises(ValueError, mod4, 0)
+        self.assertRaises(ValueError, mod5, -1)
+        self.assertRaises(ValueError, mod5, 0)
 
 
     def test_types(self):
-        self.assertRaises(ValueError, mod4, "hi")
+        self.assertRaises(ValueError, mod5, "hi")
