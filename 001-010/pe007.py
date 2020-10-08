@@ -28,5 +28,3 @@ def mod7(x):
 	    i += 2
 
 	return(primes[x - 1])
-
-	
