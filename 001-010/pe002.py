@@ -4,18 +4,18 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
+
 def mod2(lim):
 
-	if type(lim) != int or lim < 0:
-		raise ValueError("The limit must be a non-negative integer")
+    if type(lim) != int or lim < 0:
+        raise ValueError("The limit must be a non-negative integer")
 
-	fib = [1, 2]
-	while fib[-1] + fib[-2] < lim:
-	    fib.append(fib[-1] + fib[-2])
+    fib = [1, 2]
+    while fib[-1] + fib[-2] < lim:
+        fib.append(fib[-1] + fib[-2])
 
-	sum = 0
-	for i in fib:
-	    if i % 2 == 0:
-	        sum += i
-	return sum
-
+    sum = 0
+    for i in fib:
+        if i % 2 == 0:
+            sum += i
+    return sum

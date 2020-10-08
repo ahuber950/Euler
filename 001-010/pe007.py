@@ -6,6 +6,7 @@
 
 import math
 
+
 def isprime(num):
     prime = True
     for i in range(2, math.ceil(math.sqrt(num)) + 1):
@@ -17,14 +18,14 @@ def isprime(num):
 
 def mod7(x):
 
-	if type(x) != int or x < 1:
-		raise ValueError("The value must be an integer greater than zero")
+    if type(x) != int or x < 1:
+        raise ValueError("The value must be an integer greater than zero")
 
-	primes = [2]
-	i = 3
-	while len(primes) < x:
-	    if isprime(i) is True:
-	        primes.append(i)
-	    i += 2
+    primes = [2]
+    i = 3
+    while len(primes) < x:
+        if isprime(i) is True:
+            primes.append(i)
+        i += 2
 
-	return(primes[x - 1])
+    return primes[x - 1]

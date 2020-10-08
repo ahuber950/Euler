@@ -24,9 +24,10 @@ def square_sum(limit_sqsu):
         sum += i
     return sum ** 2
 
+
 def mod6(limit_mod):
 
-	if type(limit_mod) != int or limit_mod < 1:
-		raise ValueError("The value must be an integer greater than zero")
+    if type(limit_mod) != int or limit_mod < 1:
+        raise ValueError("The value must be an integer greater than zero")
 
-	return(square_sum(limit_mod) - sum_squares(limit_mod))
+    return square_sum(limit_mod) - sum_squares(limit_mod)

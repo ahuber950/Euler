@@ -12,6 +12,5 @@ class Testpe004(unittest.TestCase):
         self.assertRaises(ValueError, mod4, -1)
         self.assertRaises(ValueError, mod4, 0)
 
-
     def test_types(self):
         self.assertRaises(ValueError, mod4, "hi")

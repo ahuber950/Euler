@@ -29,7 +29,6 @@ def mod5(num):
     if type(num) != int or num < 1:
         raise ValueError("The value must be an integer greater than zero")
 
-
     min_facs = []
     for i in range(2, num + 1):
         facs_facs = pfacs(i)
@@ -39,4 +38,4 @@ def mod5(num):
                 min_facs.sort()
 
     p = prod(min_facs)
-    return(p)
+    return p
