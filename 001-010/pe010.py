@@ -4,24 +4,30 @@
 
 # Find the sum of all the primes below two million.
 
-import time
+def mod10(num):
 
-st = time.time()
+	import math
 
-not_prime = set()
-prime = set()
-num = 2000000
+	if type(num) != int or num < 2:
+		raise ValueError("The value must be an integer greater than zero")
 
-for i in range(2, num):
-    if i not in not_prime:
-        prime.add(i)
-        for j in range(i, (num // i) + 1):
-            not_prime.add(i * j)
-            if i == 5:
-                print(i * j)
+	isprime = True
+	primes = []
+	if num > 2:
+		primes.append(2)
+
+	for i in range(3, num, 2):
+		for j in primes:
+			if i % j == 0:
+				isprime = False
+				break
+			if j > i / j :
+				break
+		if isprime == True:
+			primes.append(i)
+		isprime = True
 
 
-print(sum(prime))
-end = time.time()
+	return(sum(primes))
 
-print("this code took ", str(end - st), " seconds to run")
+print(mod10(2000000))
