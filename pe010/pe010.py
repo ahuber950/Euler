@@ -29,5 +29,3 @@ def mod10(num):
 
 
 	return(sum(primes))
-
-print(mod10(2000000))
