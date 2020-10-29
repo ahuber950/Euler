@@ -11,15 +11,15 @@
 
 def mod9(desired_sum):
 
-	import math
+    import math
 
-	if type(desired_sum) != int or desired_sum < 1:
-		raise ValueError("The value must be an integer greater than zero")
+    if type(desired_sum) != int or desired_sum < 1:
+        raise ValueError("The value must be an integer greater than zero")
 
-	for c in range(1, math.ceil((desired_sum / 2 + 1))):
-		for b in range(1, math.ceil((desired_sum / 4 + 1))):
-			a = desired_sum - c - b
-			if a ** 2 + b ** 2 == c ** 2 and b != c and a != c:
-				return a * b * c
+    for c in range(1, math.ceil((desired_sum / 2 + 1))):
+        for b in range(1, math.ceil((desired_sum / 4 + 1))):
+            a = desired_sum - c - b
+            if a ** 2 + b ** 2 == c ** 2 and b != c and a != c:
+                return a * b * c
 
-	return('No Pythagorean Triplet exists with that sum')
+    return "No Pythagorean Triplet exists with that sum"

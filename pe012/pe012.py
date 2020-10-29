@@ -17,27 +17,27 @@
 
 # What is the value of the first triangle number to have over five hundred divisors?
 
+
 def mod12(num_divs):
-	import math
+    import math
 
-	if type(num_divs) != int or num_divs < 1:
-		raise ValueError("The value must be an integer greater than zero")
+    if type(num_divs) != int or num_divs < 1:
+        raise ValueError("The value must be an integer greater than zero")
 
-	trinum = 0.0
-	counter = 0.0
-	factors = []
+    trinum = 0.0
+    counter = 0.0
+    factors = []
 
-	while len(factors) <= num_divs:
-	    counter += 1	
-	    trinum = trinum + counter
-	    factors = [1.0, trinum]
-	    for i in range(2, int(math.ceil(math.sqrt(trinum)))):
-	        if trinum % i == 0:
-	            factors.append(i)
-	            factors.append(trinum / i)
+    while len(factors) <= num_divs:
+        counter += 1
+        trinum = trinum + counter
+        factors = [1.0, trinum]
+        for i in range(2, int(math.ceil(math.sqrt(trinum)))):
+            if trinum % i == 0:
+                factors.append(i)
+                factors.append(trinum / i)
 
-	    if math.sqrt(trinum) % 1 == 0:
-	        factors.append(math.sqrt(trinum))
+        if math.sqrt(trinum) % 1 == 0:
+            factors.append(math.sqrt(trinum))
 
-
-	return trinum
+    return trinum

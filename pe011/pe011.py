@@ -54,14 +54,18 @@ def mod11(x):
     import numpy as np
 
     if type(x) != str:
-        raise ValueError("The value must be a string of 400 \
-two-digit numbers (800 characters) to form a 20x20 grid")
+        raise ValueError(
+            "The value must be a string of 400 \
+two-digit numbers (800 characters) to form a 20x20 grid"
+        )
 
     x = x.replace(" ", "")
 
     if len(x) != 800:
-        raise ValueError("The value must be a string of 400 \
-two-digit numbers (800 characters) to form a 20x20 grid")
+        raise ValueError(
+            "The value must be a string of 400 \
+two-digit numbers (800 characters) to form a 20x20 grid"
+        )
 
     y = np.zeros((20, 20))
     for i in range(20):
