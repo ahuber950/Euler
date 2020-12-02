@@ -2,8 +2,8 @@ import unittest
 from pe016 import mod16
 
 
-class Testpe015(unittest.TestCase):
-    def test_pe015(self):
+class Testpe016(unittest.TestCase):
+    def test_pe016(self):
         self.assertEqual(mod16(2), 4)
         self.assertEqual(mod16(10), 7)
         self.assertEqual(mod16(1000), 1366)
